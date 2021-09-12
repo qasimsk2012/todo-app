@@ -11,13 +11,28 @@ code {
     monospace;
 }
 
+#root {
+  position: relative;
+  top: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#task-input {
+  display: flex;
+  flex-direction: row;
+}
+
 #task-input input {
+  width: 600px;
   background-color: #141850;
-  color: #ed7966;
+  color: #fff;
   border-radius: 8px;
   border: 1px solid #141850;
   font-size: 20px;
   padding: 10px 20px;
+  transition: 0.3s ease-out;
 }
 
 #task-input input::placeholder {
@@ -38,10 +53,31 @@ code {
   color: #fff;
   font-size: 20px;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 10px 18px;
   border-radius: 50%;
+  transition: all 0.2s;
 }
 
 #add:hover {
+  cursor: pointer;
   filter: brightness(1.1);
+}
+
+#display-tasks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.task {
+  width: 50%;
+  padding: 15px 30px;
+  border-radius: 5px;
+  color: #141850;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ed7966;
+  margin-bottom: 10px;
 }
